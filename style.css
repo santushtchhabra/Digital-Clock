@@ -1,0 +1,324 @@
+* {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(210, 206, 206);
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 10vh;
+  background-color: wheat;
+}
+.nav ul {
+  display: flex;
+  flex-direction: row;
+  gap: 20vw;
+  background-color: wheat;
+}
+
+.nav button {
+  background-color: wheat;
+  font-weight: bolder;
+  font-size: larger;
+  font-family: cursive;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  color: black;
+  box-shadow: 0 0 5px rgba(243, 219, 87, 0.5);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.nav button:hover {
+  background-color: gold;
+  color: white;
+  box-shadow: 0 0 15px gold, 0 0 30px orange;
+  transform: scale(1.05);
+}
+
+.clock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh; /* Full height for vertical centering */
+  color: rgb(234, 182, 50); /* Optional color for the clock text */
+  font-weight: bolder;
+  font-size: 4rem;
+  font-family: "Courier New", monospace;
+}
+
+.MadeBYSantushtChhabra {
+  font-size: 40px;
+  color: rgb(233, 169, 6);
+  margin-top: 60px;
+  font-weight: bolder;
+  font-style: italic;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#time {
+  border-radius: 8vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30vh;
+  width: 40vw;
+  background-color: rgb(244, 236, 142);
+  color: black;
+  border: 1px solid gold;
+  box-shadow: 0 0 10px rgb(238, 219, 112), 0 0 20px orange;
+  transition: all 0.4s ease-in-out;
+}
+
+#time:hover {
+  box-shadow: 0 0 20px gold, 0 0 40px orange;
+  transform: scale(1.02); /* slight zoom */
+}
+
+/* stopwatch html */
+
+.dabba {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
+}
+
+#display {
+  width: 30vw;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  margin-bottom: 50px;
+  background-color: rgb(244, 236, 142);
+  padding: 20px 40px;
+  border-radius: 10vw;
+  transition: all 0.4s ease-in-out;
+  box-shadow: 0 0 10px rgb(238, 219, 112), 0 0 20px orange;
+}
+
+#display:hover {
+  box-shadow: 0 0 20px gold, 0 0 40px orange;
+  transform: scale(1.02); /* slight zoom */
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.buttons button {
+  font-size: 1.2rem;
+  padding: 15px 30px;
+  margin: 5px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.start {
+  background-color: lightgreen;
+}
+.pause {
+  background-color: orange;
+}
+.reset {
+  background-color: crimson;
+  color: white;
+}
+
+.buttons button:hover {
+  transform: scale(1.35);
+  box-shadow: 0 0 10px gray;
+}
+
+/* alarm html */
+.alarm-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 60vh;
+  padding-top: 8vh;
+  background-color: rgb(210, 206, 206);
+}
+
+.alarm-container {
+  background-color: rgb(247, 237, 122);
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px gold, 0 0 40px rgb(224, 160, 41);
+  text-align: center;
+}
+
+.alarm-container h1 {
+  font-size: 2.5rem;
+  color: #ff9500;
+  margin-bottom: 30px;
+  background-color: rgb(247, 237, 125);
+}
+
+.current-time {
+  font-size: 3rem;
+  background: #fff8dc;
+  color: #1e1e2f;
+  padding: 20px 40px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px #ab4a05;
+}
+
+input[type="time"] {
+  padding: 12px;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 20px;
+  background-color: rgb(247, 237, 122);
+}
+
+.buttons1 {
+  margin-top: 20px;
+  background-color: rgb(244, 235, 145);
+}
+
+.button2 {
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  margin: 0 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #ffbf00;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 0 20px rgb(226, 216, 159), 0 0 40px orange inset;
+}
+
+button:hover {
+  transform: scale(1.25);
+  background-color: #ff6f00;
+  color: #000;
+  box-shadow: 0 0 30px #ff9500, 0 0 60px #ff0000 inset;
+}
+
+.list1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  color: black;
+  font-size: 50px;
+  font-weight: bolder;
+  font-style: italic;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.watermark {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  opacity: 0.2;
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+  pointer-events: none; /* allows clicking through */
+  z-index: 9999;
+}
+
+@media (max-width: 768px) {
+  body {
+    overflow: hidden;
+  }
+  .nav ul a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+  }
+
+  .nav button {
+    font-size: 1rem;
+    padding: 10px 8px;
+  }
+
+  .clock {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  #time {
+    width: 60vw;
+    height: 30px;
+    font-size: 1.5rem;
+    padding: 20px;
+  }
+
+  .MadeBYSantushtChhabra {
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 20px;
+  }
+
+  .dabba {
+    margin-top: 20%;
+  }
+
+  #display {
+    width: 80vw;
+    height: auto;
+    font-size: 2rem;
+    padding: 20px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .buttons button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+  .alarm-wrapper {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 20px;
+  }
+
+  .alarm-container {
+    width: 70vw;
+    padding: 20px;
+  }
+
+  .current-time {
+    font-size: 2rem;
+    padding: 10px;
+  }
+
+  .button2 {
+    font-size: 1rem;
+    padding: 10px 10px;
+  }
+
+  .list1 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    gap: 20px;
+  }
+}
