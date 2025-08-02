@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="nav">
+      <ul type="none">
+        <a href="clock.html">
+          <button>Clock</button>
+        </a>
+        <a href="stopwatch.html">
+          <button>Stopwatch</button>
+        </a>
+        <a href="alarm.html">
+          <button>Alarm</button>
+        </a>
+      </ul>
+    </div>
+        <h1 class="MadeBYSantushtChhabra">Be In Discipline 🏋️🏋️</h1>
+
+    <div class="alarm-wrapper">
+      <div class="alarm-container">
+        <h1>Alarm Clock</h1>
+        <div class="current-time" id="currentTime">00:00:00</div>
+        <input type="time" id="alarmTime" />
+
+        <div class="buttons1">
+          <button class="button2" onclick="setAlarm()">Set Alarm</button>
+          <button class="button2" onclick="clearAlarm()">Clear Alarm</button>
+        </div>
+      </div>
+    </div>
+
+    <audio id="alarmSound" src="alarm.mp3" preload="auto"></audio>
+
+    <div class="list1">
+      <div id="alarmsList"></div>
+    </div>
+<div class="watermark">© Santusht Chhabra</div>
+
+    <script>
+      let alarmTime = null;
+      let alarmTimeout = null;
+      const alarmSound = document.getElementById("alarmSound");
+
+      function updateCurrentTime() {
+        const now = new Date();
+        const formatted = now.toLocaleTimeString("en-GB");
+        document.getElementById("currentTime").textContent = formatted;
+
+        // Trigger alarm
+        if (alarmTime === formatted.slice(0, 5)) {
+          alarmSound.play();
+        }
+      }
+      setInterval(updateCurrentTime, 1000);
+
+      function setAlarm() {
+        const input = document.getElementById("alarmTime").value;
+        if (!input) {
+          alert("Please select a valid time.");
+          return;
+        }
+        alarmTime = input;
+
+        const info = document.getElementById("alarmTime").value;
+        const listItem = document.createElement("div");
+        listItem.textContent = `⏰ Alarm set for ${info}`;
+        const alarmsList = document.getElementById("alarmsList");
+        alarmsList.appendChild(listItem);
+      }
+
+      function clearAlarm() {
+        const clear = document.getElementById("alarmsList");
+        if (clear) clear.innerHTML = ""; // remove alarms
+        
+        const alarmSound = document.getElementById("alarmSound");
+        if (alarmSound) {
+          alarmSound.pause(); // Stop sound
+          alarmSound.currentTime = 0; // Reset
+        }
+      }
+    </script>
+  </body>
+</html>
